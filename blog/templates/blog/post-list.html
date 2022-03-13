@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/blog-post.css" %}">
+{% endblock %}
+
+{% block title %}
+    {{ title }} - Bloggio
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <div id="page-header"><h1>{{ title }}</h1></div>
+        <ul id="post-list" style="list-style: none">
+            {% for post in posts %}
+                {% include "blog/includes/blog-post.html" %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+.post {
+    margin: 2rem auto;
+    max-width: 80rem;
+}
+
+.post .card-body {
+    margin: 2rem 2rem 1rem;
+}
+
+#title-area {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.post .card-title {
+    display: inline-block;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+#post-info {
+    float: right;
+    font-size: 0.9em;
+    max-width: 25%;
+    text-align: right;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.tag {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}

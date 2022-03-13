@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% load tags %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/auth.css" %}">
+{% endblock %}
+
+{% block title %}
+    Bloggio - Login
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body">
+                <h5 class="card-title">Log into your Account</h5>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="mb-3">
+                            <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                            {{ field|add_class:"form-control" }}
+                            <div class="form-text">{{ field.help_text }}</div>
+                        </div>
+                    {% endfor %}
+                    {% if form.errors %}
+                        <p style="color: #d7001c">Username or password incorrect.</p>
+                    {% endif %}
+                    <input class="btn btn-primary" id="login-button" type="submit" value="Log in">
+                    <a href="{% url "register" %}">Register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

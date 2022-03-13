@@ -1,0 +1,55 @@
+#page-header {
+    margin: 2rem auto 0;
+    position: relative;
+    left: 1rem;
+    max-width: 60rem;
+}
+
+.post {
+    margin: 2rem auto;
+    max-width: 60rem;
+}
+
+.post .card-body {
+    margin: 2rem 2rem 1rem;
+}
+
+#post-content {
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+}
+
+.post .card-title {
+    display: inline-block;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.post .card-title a {
+    color: black;
+}
+
+#post-info {
+    float: right;
+    font-size: 0.9em;
+    max-width: 25%;
+    text-align: right;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.tag {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+#post-form {
+    margin: auto;
+    margin-top: 3rem;
+    max-width: 45rem;
+}

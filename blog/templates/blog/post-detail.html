@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post-detail.css" %}">
+{% endblock %}
+
+{% block title %}
+    {{ post.title }} - Bloggio
+{% endblock %}
+
+{% block content %}
+    <div class="container post">
+        <div class="card">
+            <div class="card-body">
+                <div id="title-area">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p id="post-info">{{ post.date|date:"j.n.Y - G:i" }} by <a
+                            href="{% url "user-page" post.author %}">{{ post.author }}</a></p>
+                </div>
+                <p>{{ post.content|linebreaks }}</p>
+                <div>
+                    <br>
+                    {% for tag in tags %}
+                        <span class="tag">{{ tag.name }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

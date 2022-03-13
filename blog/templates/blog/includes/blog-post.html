@@ -1,0 +1,23 @@
+<li class="post">
+    <div class="card">
+        <div class="card-body">
+            <div id="title-area">
+                <h5 class="card-title"><a href="{% url "post-view" post.author post.slug %}">{{ post.title }}</a></h5>
+                <p id="post-info">{{ post.date|date:"j.n.Y - G:i" }} by <a
+                        href="{% url "user-page" post.author %}">{{ post.author }}</a></p>
+            </div>
+            <p id="post-content">{{ post.content_preview }}</p>
+            {% if post.content|length > 297 %}
+                <a href="{% url "post-view" post.author post.slug %}" class="card-link">Read more &#8594;</a>
+            {% endif %}
+            <div>
+                {% if post.tags.all %}
+                    <br>
+                {% endif %}
+                {% for tag in post.tags.all %}
+                    <a href="{% url 'tag-view' tag.name %}"><span class="tag">{{ tag.name }}</span></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</li>
