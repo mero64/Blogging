@@ -1,33 +1,22 @@
-#page-header {
-    margin: 2rem auto 0;
-    position: relative;
-    left: 1rem;
-    max-width: 60rem;
-}
-
 .post {
     margin: 2rem auto;
-    max-width: 60rem;
+    max-width: 80rem;
 }
 
 .post .card-body {
     margin: 2rem 2rem 1rem;
 }
 
-#post-content {
-    border-top: 1px solid #ccc;
-    margin-top: 1rem;
-    padding-top: 1.5rem;
+#title-area {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .post .card-title {
     display: inline-block;
     max-width: 70%;
     word-wrap: break-word;
-}
-
-.post .card-title a {
-    color: black;
 }
 
 #post-info {
@@ -46,10 +35,4 @@
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-}
-
-#post-form {
-    margin: auto;
-    margin-top: 3rem;
-    max-width: 45rem;
 }
